@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후기 - 코드나래</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+        }
+        .bg-blue-800 { background-color: #1E3A8A; }
+        .text-blue-800 { color: #1E3A8A; }
+        .bg-gray-100 { background-color: #F3F4F6; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center">
+                <img src="codenarea.png" alt="코드나래 로고" class="h-10 mr-3">
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-800">메인</a>
+                <a href="intro.html" class="text-gray-600 hover:text-blue-800">소개</a>
+                <a href="activities.html" class="text-gray-600 hover:text-blue-800">활동</a>
+                <a href="reviews.html" class="text-gray-600 hover:text-blue-800">후기</a>
+                <a href="faq.html" class="text-gray-600 hover:text-blue-800">FAQ</a>
+                <a href="apply.html" class="bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-blue-700">지원하기</a>
+            </nav>
+            <button class="md:hidden" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <a href="index.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-100">메인</a>
+            <a href="intro.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-100">소개</a>
+            <a href="activities.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-100">활동</a>
+            <a href="reviews.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-100">후기</a>
+            <a href="faq.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-100">FAQ</a>
+            <a href="apply.html" class="block px-6 py-2 text-sm bg-blue-800 text-white text-center rounded-md m-2">지원하기</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-blue-800">동아리원들의 이야기</h1>
+            <p class="text-lg text-gray-600 mt-4">코드나래와 함께한 사람들의 진짜 경험을 들어보세요.</p>
+        </div>
+
+        <!-- Reviews -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Review 1 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 italic">“비전공자인데 처음부터 차근차근 알려주셔서 자신감이 생겼어요. 파이썬 문법부터 간단한 API 제작까지 해봤고, 프로젝트 완성했을 때 뿌듯했습니다.”</p>
+                <p class="mt-4 font-bold text-right text-blue-800">- 김하늘 (경영학과 21)</p>
+            </div>
+            <!-- Review 2 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 italic">“혼자 공부할 땐 어려웠던 부분이 협업하니 금방 해결됐어요. GitHub 협업이 특히 인상 깊었고, 팀원들과 주 1회 모임이 동기 부여가 됐습니다.”</p>
+                <p class="mt-4 font-bold text-right text-blue-800">- 박진수 (컴퓨터공학과 23)</p>
+            </div>
+            <!-- Review 3 -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                <p class="text-gray-600 italic">“프론트엔드와 백엔드를 동시에 경험할 수 있어 좋았어요. 디자인 전공이지만 UI 구현과 API 연결까지 해봤습니다.”</p>
+                <p class="mt-4 font-bold text-right text-blue-800">- 이서연 (디자인학과 22)</p>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="bg-blue-800 text-white p-8 rounded-lg shadow-md mb-16 text-center">
+            <h2 class="text-3xl font-bold mb-4">후기 통계</h2>
+            <div class="flex justify-center space-x-16">
+                <div>
+                    <p class="text-4xl font-bold">4.8 / 5</p>
+                    <p>만족도</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold">95%</p>
+                    <p>추천 의향</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <p class="text-xl text-gray-700">“다음 후기를 남기는 주인공이 되어보세요.”</p>
+            <div class="mt-8">
+                <a href="apply.html" class="bg-blue-800 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700">지원하기</a>
+                <a href="activities.html" class="ml-4 bg-gray-200 text-gray-800 px-8 py-4 rounded-lg font-bold hover:bg-gray-300">활동 더 보기</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <p>동아리장: 민수민 | 주소: 경기도 용인시 처인구 명지로 116(명지대학교)</p>
+                <p>전화: 010-0000-0000 | 이메일: abcdefg@codena.kr</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="https://www.codenarea.kr/" class="hover:underline">홈페이지</a>
+                    <a href="https://www.instagram.com/codenarae/" class="hover:underline">인스타그램</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

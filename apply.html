@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지원하기 - 코드나래</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+        }
+        .bg-blue-800 { background-color: #1E3A8A; }
+        .text-blue-800 { color: #1E3A8A; }
+        .bg-gray-100 { background-color: #F3F4F6; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center">
+                <img src="codenarea.png" alt="코드나래 로고" class="h-10 mr-3">
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-blue-800">메인</a>
+                <a href="intro.html" class="text-gray-600 hover:text-blue-800">소개</a>
+                <a href="activities.html" class="text-gray-600 hover:text-blue-800">활동</a>
+                <a href="reviews.html" class="text-gray-600 hover:text-blue-800">후기</a>
+                <a href="faq.html" class="text-gray-600 hover:text-blue-800">FAQ</a>
+                <a href="apply.html" class="bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-blue-700">지원하기</a>
+            </nav>
+            <button class="md:hidden" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div class="hidden md:hidden" id="mobile-menu">
+            <a href="index.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-100">메인</a>
+            <a href="intro.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-100">소개</a>
+            <a href="activities.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-100">활동</a>
+            <a href="reviews.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-100">후기</a>
+            <a href="faq.html" class="block px-6 py-2 text-sm text-gray-600 hover:bg-gray-100">FAQ</a>
+            <a href="apply.html" class="block px-6 py-2 text-sm bg-blue-800 text-white text-center rounded-md m-2">지원하기</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-blue-800">지원하기</h1>
+            <p class="text-lg text-gray-600 mt-4">코드나래와 함께할 새로운 멤버를 모집합니다.</p>
+        </div>
+
+        <div class="max-w-4xl mx-auto bg-gray-100 p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6">지원 안내</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-8">
+                <li>파이썬·알고리즘·백엔드 입문 중심</li>
+                <li>선착순 + 간단 면접 (약 3분)</li>
+                <li>마감: 9월 5일(금) 23:59</li>
+                <li>정원: 20명 내외 (초과 시 대기자)</li>
+                <li>모임: 주 1회 화 19:00~21:00 (5공학관 5층 + Discord)</li>
+                <li>회비: 월 5,000원</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold text-blue-800 mb-6">지원서 작성</h2>
+            <form>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">이름</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="student-id" class="block text-sm font-medium text-gray-700">학번/학년</label>
+                        <input type="text" id="student-id" name="student-id" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="major" class="block text-sm font-medium text-gray-700">학과</label>
+                        <input type="text" id="major" name="major" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">이메일</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                     <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">연락처</label>
+                        <input type="tel" id="phone" name="phone" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-gray-700">관심 분야 (다중 선택 가능)</label>
+                    <div class="mt-2 space-y-2">
+                        <label class="inline-flex items-center"><input type="checkbox" class="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50"> <span class="ml-2">Python</span></label>
+                        <label class="inline-flex items-center ml-6"><input type="checkbox" class="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50"> <span class="ml-2">알고리즘</span></label>
+                        <label class="inline-flex items-center ml-6"><input type="checkbox" class="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50"> <span class="ml-2">백엔드</span></label>
+                        <label class="inline-flex items-center ml-6"><input type="checkbox" class="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50"> <span class="ml-2">데이터 사이언스</span></label>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label for="motivation" class="block text-sm font-medium text-gray-700">한 줄 지원 동기</label>
+                    <textarea id="motivation" name="motivation" rows="3" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+
+                <div class="mt-6">
+                    <label for="portfolio" class="block text-sm font-medium text-gray-700">포트폴리오·깃허브·블로그 (선택)</label>
+                    <input type="url" id="portfolio" name="portfolio" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+
+                <div class="mt-6">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" required class="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50">
+                        <span class="ml-2 text-sm text-gray-600">개인정보 수집·이용에 동의합니다.</span>
+                    </label>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button type="submit" class="bg-blue-800 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700">지원서 작성하기</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <p>동아리장: 민수민 | 주소: 경기도 용인시 처인구 명지로 116(명지대학교)</p>
+                <p>전화: 010-0000-0000 | 이메일: abcdefg@codena.kr</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="https://www.codenarea.kr/" class="hover:underline">홈페이지</a>
+                    <a href="https://www.instagram.com/codenarae/" class="hover:underline">인스타그램</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
